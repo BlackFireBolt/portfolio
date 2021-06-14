@@ -25,7 +25,7 @@
           <h1>Contact form:</h1>
         </v-col>
         <v-col cols="12" md="12" sm="12" xs="12">
-          <v-form>
+          <v-form ref="form" lazy-validation v-model="valid">
             <v-text-field
               v-model="name"
               :rules="nameRules"
@@ -42,10 +42,10 @@
               counter="200"
               label="Message"
               :rules="messageRules"
-              v-value="message"
+              v-model="message"
             ></v-textarea>
             <v-btn
-              :disabled="!valid"
+              :disabled="!valid || name === '' || email === '' || message === ''"
               color="success"
               class="mr-4"
               @click="validate"
@@ -85,6 +85,21 @@ export default {
       ]
     };
   },
-  
+  watch: {
+    name: function() {
+      this.validateField();
+    },
+    email: function() {
+      this.validateField();
+    },
+    message: function() {
+      this.validateField();
+    }
+  },
+  methods: {
+    validateField() {
+      this.$refs.form.validate();
+    }
+  }
 };
 </script>

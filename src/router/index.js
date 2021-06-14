@@ -23,6 +23,11 @@ const routes = [
     path: "/contacts",
     name: "Contacts",
     component: () => import("../views/Contacts.vue")
+  },
+  {
+    path: "*",
+    name: "Error",
+    component: () => import("../views/Error.vue")
   }
 ];
 

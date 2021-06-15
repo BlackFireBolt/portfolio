@@ -1,6 +1,6 @@
 <template>
   <v-row class="mt-12">
-      <v-col align="center" cols="12" md="12" sm="12" xs="12">
+    <v-col align="center" cols="12" md="12" sm="12" xs="12">
       <p>My skills:</p>
     </v-col>
     <v-col
@@ -10,12 +10,34 @@
       xs="12"
       v-for="item in itemsSkills"
       :key="item.name"
-    >
-      <v-card>
-        <v-card-text align="center">{{ item.name }}</v-card-text>
-      </v-card>
+      ><v-hover v-slot="{ hover }">
+        <v-card>
+          <v-img height="150" :src="item.image">
+            <v-expand-transition>
+              <div
+                v-if="hover"
+                class="
+                  d-flex
+                  transition-fast-in-fast-out
+                  orange
+                  darken-2
+                  v-card--reveal
+                  text-h4
+                  white--text
+                  justify-center align-center
+                "
+                style="height: 100%"
+              >
+                {{ item.name }}
+              </div>
+            </v-expand-transition>
+          </v-img>
+        </v-card></v-hover
+      >
     </v-col>
-    <v-divider></v-divider>
+    <v-col align="center" cols="12" md="12" sm="12" xs="12">
+      <v-divider></v-divider>
+    </v-col>
     <v-col align="center" cols="12" md="12" sm="12" xs="12">
       <p>Familiar with:</p>
     </v-col>
@@ -27,12 +49,33 @@
       v-for="item in itemsFamiliar"
       :key="item.name"
     >
-      <v-card>
-        <v-card-text align="center">{{ item.name }}</v-card-text>
-      </v-card>
+      <v-hover v-slot="{ hover }">
+        <v-card>
+          <v-img height="150" :src="item.image">
+            <v-expand-transition>
+              <div
+                v-if="hover"
+                class="
+                  d-flex
+                  transition-fast-in-fast-out
+                  orange
+                  darken-2
+                  v-card--reveal
+                  text-h4
+                  white--text
+                  justify-center align-center
+                "
+                style="height: 100%"
+              >
+                {{ item.name }}
+              </div>
+            </v-expand-transition>
+          </v-img>
+        </v-card></v-hover
+      >
     </v-col>
-    <v-col align="center" cols="12" md="12" sm="12" xs="12">
-      <v-btn>Download resume</v-btn>
+    <v-col class="my-5" align="center" cols="12" md="12" sm="12" xs="12">
+      <v-btn x-large dark color="green "><v-icon>mdi-download</v-icon>Download resume</v-btn>
     </v-col>
   </v-row>
 </template>
@@ -43,23 +86,24 @@ export default {
   data() {
     return {
       itemsSkills: [
-        { name: "Python" },
-        { name: "Django" },
-        { name: "Django REST" },
-        { name: "HTML/CSS"},
-        { name: "JavaScript" },
-        { name: "VueJS" },
-        { name: "Vuetify" },
-        { name: "Flask" },
-        { name: "Nginx"}
+        { name: "Python", image: "http://placehold.it/300x150" },
+        { name: "Django", image: "http://placehold.it/300x150"  },
+        { name: "Django REST", image: "http://placehold.it/300x150"  },
+        { name: "Django Channels", image: "http://placehold.it/300x150"  },
+        { name: "HTML/CSS", image: "http://placehold.it/300x150" },
+        { name: "JavaScript", image: "http://placehold.it/300x150"  },
+        { name: "VueJS", image: "http://placehold.it/300x150"  },
+        { name: "Vuetify", image: "http://placehold.it/300x150"  },
+        { name: "Flask", image: "http://placehold.it/300x150"  },
+        { name: "Nginx", image: "http://placehold.it/300x150"  },
       ],
       itemsFamiliar: [
-          { name: "C++" },
-          { name: "Java" },
-          { name: "Ruby on Rails" },
-          { name: "Object C" },
-          { name: "PowerShell" },
-      ]
+        { name: "C++", image: "http://placehold.it/300x150"  },
+        { name: "Java", image: "http://placehold.it/300x150"  },
+        { name: "Ruby on Rails", image: "http://placehold.it/300x150"  },
+        { name: "Object C", image: "http://placehold.it/300x150"  },
+        { name: "PowerShell", image: "http://placehold.it/300x150"  },
+      ],
     };
   },
 };

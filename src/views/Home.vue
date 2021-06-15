@@ -1,5 +1,10 @@
 <template>
-  <v-row class="mt-15">
+  <v-row class="mt-6">
+     <v-col align="center" cols="12" md="12" sm="12" xs="12"
+      >
+    <div class="text-h3 mb-2">Andrey Boltikov</div>
+    <div class="text-subtitle-1 mb-2">Full Stuck Web developer</div>
+     </v-col>
     <v-col cols="12" md="6" sm="12" xs="12"
       ><v-img
         max-width="600"
@@ -8,7 +13,8 @@
       ></v-img
     ></v-col>
     <v-col cols="12" md="6" sm="12" xs="12"
-      ><p>
+      ><div class="text-h4 mb-1">About me</div>
+      <p>
         I am a beginner Django developer (I have been studying for over a year),
         Django REST, familiar with web layout, HTML, CSS, JS (jQuery, VueJS). I
         have also been developing telegram bots in Python and CRM-system in

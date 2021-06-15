@@ -45,10 +45,12 @@
               v-model="message"
             ></v-textarea>
             <v-btn
-              :disabled="!valid || name === '' || email === '' || message === ''"
+              :disabled="
+                !valid || name === '' || email === '' || message === ''
+              "
               color="success"
               class="mr-4"
-              @click="validate"
+              @click="sendEmail"
             >
               Send message
             </v-btn>
@@ -62,6 +64,8 @@
 </template>
 
 <script>
+//import {send} from "emailjs-com";
+
 export default {
   name: "Contacts",
   data() {
@@ -71,35 +75,56 @@ export default {
       message: "",
       valid: false,
       nameRules: [
-          v => !!v || 'Name is required', 
-          v => (v && v.length <= 20) || 'Name must be less than 20 characters',
+        (v) => !!v || "Name is required",
+        (v) => (v && v.length <= 20) || "Name must be less than 20 characters",
       ],
       emailRules: [
-          v => !!v || 'Email is required',
-          v => /.+@.+\..+/.test(v) || 'E-mail must be valid'
+        (v) => !!v || "Email is required",
+        (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
       ],
       messageRules: [
-          v => !!v || 'Message is required',
-          v => !(v && v.length <= 20) || 'Name must be at least 20 characters long',
-          v => (v && v.length <= 200) || 'Name must be less than 200 characters',
-      ]
+        (v) => !!v || "Message is required",
+        (v) =>
+          !(v && v.length <= 20) || "Name must be at least 20 characters long",
+        (v) =>
+          (v && v.length <= 200) || "Name must be less than 200 characters",
+      ],
     };
   },
   watch: {
-    name: function() {
+    name: function () {
       this.validateField();
     },
-    email: function() {
+    email: function () {
       this.validateField();
     },
-    message: function() {
+    message: function () {
       this.validateField();
-    }
+    },
   },
   methods: {
     validateField() {
       this.$refs.form.validate();
+    },
+    sendEmail() {
+      /*send(
+        "service_g8ar2w8",
+        "template_naj55z7",
+        {message: this.message},
+        "user_CZHtOyu4O3krWJ1noRXUK"
+      ).then((response) => {
+        console.log('SUCCESS!!', response.status);
+      }, (err) => {
+        console.log('FAILED', err)
+      });*/
+
+      this.name = "";
+      this.email = "";
+      this.message = "";
+    },
+    reset(){
+      this.$refs.form.reset()
     }
-  }
+  },
 };
 </script>

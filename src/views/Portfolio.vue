@@ -1,7 +1,7 @@
 <template>
     <v-row class="mt-12">
       <v-col align="center" cols="12" md="12" sm="12" xs="12">
-      <p>Web portfolio:</p>
+      <div class="text-h4 mb-1 primary--text">Web portfolio</div>
     </v-col>
     <v-col
       cols="12"

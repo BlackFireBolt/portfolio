@@ -1,28 +1,22 @@
 <template>
   <v-row class="mt-12">
     <v-col cols="12" md="6" sm="12" xs="12">
-      <v-row>
-        <v-col cols="12" md="12" sm="12" xs="12">
-          <h1>Contact wit me:</h1>
-        </v-col>
-        <v-col cols="12" md="12" sm="12" xs="12">
-          <p>Republic of Belarus, Minsk</p>
-        </v-col>
-        <v-col cols="12" md="12" sm="12" xs="12">
-          <p>andreyboltikov@gmail.com</p>
-        </v-col>
-        <v-col cols="12" md="12" sm="12" xs="12">
-          <p>+375 33 319 69 35</p>
-        </v-col>
-        <v-col cols="12" md="12" sm="12" xs="12">
-          <p>@Bollt</p>
-        </v-col>
-      </v-row>
+      
+          <div class="text-h4 mb-12 primary--text">Contact with me:</div>
+        
+          <div class="mb-8"><v-icon class="mr-4" size="46px">mdi-map-marker</v-icon>Republic of Belarus, <span class="primary--text">Minsk</span></div>
+        
+          <div class="mb-8"><v-icon class="mr-4" size="46px">mdi-email</v-icon><span class="primary--text">andreyboltikov</span>@gmail.com</div>
+        
+          <div class="mb-8"><v-icon class="mr-4" size="46px">mdi-phone</v-icon>+375 33 <span class="primary--text">319 69 35</span></div>
+        
+          <div class="mb-8"><v-icon class="mr-4" size="46px">mdi-send</v-icon>Telegram: <span class="primary--text">@</span>Bollt</div>
+       
     </v-col>
     <v-col cols="12" md="6" sm="12" xs="12">
       <v-row>
         <v-col cols="12" md="12" sm="12" xs="12">
-          <h1>Contact form:</h1>
+          <div class="text-h4 mb-1 primary--text">Contact form:</div>
         </v-col>
         <v-col cols="12" md="12" sm="12" xs="12">
           <v-form ref="form" lazy-validation v-model="valid">
@@ -48,7 +42,7 @@
               :disabled="
                 !valid || name === '' || email === '' || message === ''
               "
-              color="success"
+              color="primary"
               class="mr-4"
               @click="sendEmail"
             >

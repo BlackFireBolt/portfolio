@@ -1,7 +1,7 @@
 <template>
   <v-row class="mt-12">
     <v-col align="center" cols="12" md="12" sm="12" xs="12">
-      <p>My skills:</p>
+      <div class="text-h4 mb-1 primary--text">My skills</div>
     </v-col>
     <v-col
       cols="12"
@@ -19,8 +19,7 @@
                 class="
                   d-flex
                   transition-fast-in-fast-out
-                  orange
-                  darken-2
+                  secondary
                   v-card--reveal
                   text-h4
                   white--text
@@ -39,7 +38,7 @@
       <v-divider></v-divider>
     </v-col>
     <v-col align="center" cols="12" md="12" sm="12" xs="12">
-      <p>Familiar with:</p>
+      <div class="text-h4 mb-1 primary--text">Familiar with</div>
     </v-col>
     <v-col
       cols="12"
@@ -58,8 +57,7 @@
                 class="
                   d-flex
                   transition-fast-in-fast-out
-                  orange
-                  darken-2
+                  secondary
                   v-card--reveal
                   text-h4
                   white--text
@@ -75,7 +73,7 @@
       >
     </v-col>
     <v-col class="my-5" align="center" cols="12" md="12" sm="12" xs="12">
-      <v-btn x-large dark color="green "><v-icon>mdi-download</v-icon>Download resume</v-btn>
+      <v-btn x-large dark color="primary"><v-icon>mdi-download</v-icon>Download resume</v-btn>
     </v-col>
   </v-row>
 </template>

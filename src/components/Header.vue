@@ -21,13 +21,13 @@
       ></span>
       <v-toolbar-title
         ><router-link to="/" tag="span" style="cursor: pointer"
-          >Andrey Boltikov</router-link
+          >Andrey <span class="primary--text">Boltikov</span></router-link
         ></v-toolbar-title
       >
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn
-          active-class="green--text"
+          active-class="secondary--text"
           text
           v-for="item in itemsList"
           :key="item.title"

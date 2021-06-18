@@ -16,6 +16,11 @@
 <script>
 export default {
   name: "Error",
+  metaInfo: {
+    title: "Error",
+    titleTemplate: "Andrey Boltikov - %s",
+    meta: [{property: "og:title", content: "Andrey Boltikov"}]
+  },
 };
 </script>
 

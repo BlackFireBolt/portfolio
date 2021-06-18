@@ -62,6 +62,11 @@
 
 export default {
   name: "Contacts",
+  metaInfo: {
+    title: "Contacts",
+    titleTemplate: "Andrey Boltikov - %s",
+    meta: [{property: "og:title", content: "Andrey Boltikov"}]
+  },
   data() {
     return {
       name: "",

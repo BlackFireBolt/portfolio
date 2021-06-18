@@ -81,6 +81,11 @@
 <script>
 export default {
   name: "Resume",
+  metaInfo: {
+    title: "Resume",
+    titleTemplate: "Andrey Boltikov - %s",
+    meta: [{property: "og:title", content: "Andrey Boltikov"}]
+  },
   data() {
     return {
       itemsSkills: [

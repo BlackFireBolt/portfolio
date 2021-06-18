@@ -21,6 +21,11 @@ import "animate.css"
 
 export default {
   name: "App",
+  metaInfo: {
+    title: "Home",
+    titleTemplate: "Andrey Boltikov - %s",
+    meta: [{property: "og:title", content: "Andrey Boltikov"}]
+  },
   components: {
     "footer-comp": Footer,
     "header-comp": Header,

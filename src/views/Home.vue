@@ -44,6 +44,11 @@
 <script>
 export default {
   name: "Home",
+  metaInfo: {
+    title: "Home",
+    titleTemplate: "Andrey Boltikov - %s",
+    meta: [{property: "og:title", content: "Andrey Boltikov"}]
+  },
   data(){
     return {
       icons: [

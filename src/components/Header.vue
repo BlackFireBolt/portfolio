@@ -3,6 +3,7 @@
     <v-navigation-drawer v-model="sidebar" app>
       <v-list nav dense>
         <v-list-item link
+        active-class="secondary--text"
           v-for="item in itemsList"
           :key="item.title"
           :to="item.path"
@@ -17,7 +18,9 @@
     </v-navigation-drawer>
     <v-app-bar flat color="white">
       <span class="hidden-sm-and-up"
-        ><v-app-bar-nav-icon @click="sidebar = !sidebar"></v-app-bar-nav-icon
+        ><v-app-bar-nav-icon @click="sidebar = !sidebar">
+          
+          <v-icon color="primary">mdi-menu</v-icon></v-app-bar-nav-icon
       ></span>
       <v-toolbar-title
         ><router-link to="/" tag="span" style="cursor: pointer"

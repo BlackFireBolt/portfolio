@@ -2,7 +2,7 @@
   <v-row class="mt-12">
     <v-col cols="12" md="6" sm="12" xs="12">
       
-          <div class="text-h4 mb-12 primary--text">Contact with me:</div>
+          <div class="text-h4 mb-12 primary--text" align="center">Contact with me:</div>
         
           <div class="mb-8"><v-icon class="mr-4" size="46px">mdi-map-marker</v-icon>Republic of Belarus, <span class="primary--text">Minsk</span></div>
         
@@ -16,7 +16,7 @@
     <v-col cols="12" md="6" sm="12" xs="12">
       <v-row>
         <v-col cols="12" md="12" sm="12" xs="12">
-          <div class="text-h4 mb-1 primary--text">Contact form:</div>
+          <div class="text-h4 mb-1 primary--text" align="center">Contact form:</div>
         </v-col>
         <v-col cols="12" md="12" sm="12" xs="12">
           <v-form ref="form" lazy-validation v-model="valid">

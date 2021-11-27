@@ -32,10 +32,10 @@
       </p>
       <p class="text-justify">I have a master's degree in engineering and technology. In my free time I attend acting courses and learn to play the guitar. 
       </p>
-      <div align="center" class="mt-8">
+      <div align="center" class="my-8">
         <div class="text-h4 mb-1 primary--text">My social links</div>
-      <v-btn v-for="icon in icons" target="_blank" :href="icon.href" :key="icon.id" class="mx-4" fab dark large color="primary">
-          <v-icon dark size="36px">{{ icon.icon }}</v-icon>
+      <v-btn v-for="icon in icons" target="_blank" :href="icon.href" :key="icon.id" class="mx-4" fab dark v-bind="size" color="primary">
+          <v-icon dark>{{ icon.icon }}</v-icon>
         </v-btn></div></v-col
     >
   </v-row>
@@ -58,6 +58,11 @@ export default {
         {href: "https://stackoverflow.com/users/story/16232652", icon: "mdi-stack-overflow"}
       ]
     }
-  }
+  },
+   computed: {
+    size () {
+      const size = {xs:'small',sm:'small',lg:'large',xl:'x-large'}[this.$vuetify.breakpoint.name];
+      return size ? { [size]: true } : {}
+    }}
 };
 </script>

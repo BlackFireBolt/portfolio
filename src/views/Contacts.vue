@@ -1,60 +1,41 @@
 <template>
+<v-container fliud align-center>
   <v-row class="mt-12">
-    <v-col cols="12" md="6" sm="12" xs="12">
+    
+    <v-col cols="12" md="12" sm="12" xs="12">
+    <div class="text-h4 mb-12 primary--text" align="center">Contact with me:</div>
+    </v-col>
+    
+    
+    <v-col cols="7" md="6" sm="7" justify="center">
       
-          <div class="text-h4 mb-12 primary--text" align="center">Contact with me:</div>
+          
         
-          <div class="mb-8"><v-icon class="mr-4" size="46px">mdi-map-marker</v-icon>Republic of Belarus, <span class="primary--text">Minsk</span></div>
+          <div class="mb-8" align="right"><v-icon class="mr-4" size="46px">mdi-map-marker</v-icon>Poland, <span class="primary--text">Gdańsk</span></div>
         
-          <div class="mb-8"><v-icon class="mr-4" size="46px">mdi-email</v-icon><span class="primary--text">andreyboltikov</span>@gmail.com</div>
+          <div class="mb-8" align="right"><a href="mailto:andreyboltikov@gmail.com"><v-icon class="mr-4 d-none d-sm-inline" size="46px">mdi-email</v-icon>andreyboltikov@gmail.com</a></div>
         
-          <div class="mb-8"><v-icon class="mr-4" size="46px">mdi-phone</v-icon>+375 33 <span class="primary--text">319 69 35</span></div>
+          <div class="mb-8" align="right"><a href="tel:+48503360984"><v-icon class="mr-4" size="46px">mdi-phone</v-icon>+48 503 360 984</a></div>
         
-          <div class="mb-8"><v-icon class="mr-4" size="46px">mdi-send</v-icon>Telegram: <span class="primary--text">@</span>Bollt</div>
-       
-    </v-col>
-    <v-col cols="12" md="6" sm="12" xs="12">
-      <v-row>
-        <v-col cols="12" md="12" sm="12" xs="12">
-          <div class="text-h4 mb-1 primary--text" align="center">Contact form:</div>
-        </v-col>
-        <v-col cols="12" md="12" sm="12" xs="12">
-          <v-form ref="form" lazy-validation v-model="valid">
-            <v-text-field
-              v-model="name"
-              :rules="nameRules"
-              label="Name"
-              required
-            ></v-text-field>
-            <v-text-field
-              v-model="email"
-              :rules="emailRules"
-              label="Email"
-              required
-            ></v-text-field>
-            <v-textarea
-              counter="200"
-              label="Message"
-              :rules="messageRules"
-              v-model="message"
-            ></v-textarea>
-            <v-btn
-              :disabled="
-                !valid || name === '' || email === '' || message === ''
-              "
-              color="primary"
-              class="mr-4"
-              @click="sendEmail"
-            >
-              Send message
-            </v-btn>
+          <div class="mb-8" align="right"><a href="https://telegram.me/Bollt"><v-icon class="mr-4" size="46px">mdi-send</v-icon>Telegram: <span class="primary--text">@</span>Bollt</a></div>
 
-            <v-btn color="error" class="mr-4" @click="reset"> Clear </v-btn>
-          </v-form>
-        </v-col>
-      </v-row>
+          <div class="mb-8" align="right"><a href="https://wa.me/48503360984"><v-icon class="mr-4 d-none d-sm-inline" size="46px">mdi-whatsapp</v-icon>WhatsApp: +48 503 360 984</a></div>
     </v-col>
-  </v-row>
+    <v-divider vertical></v-divider>
+    <v-col cols="5" md="6" sm="5">
+      
+          <div class="mb-8" align="left"><a href="https://www.facebook.com/andrew.boltikov"><v-icon class="mr-4" size="46px">mdi-facebook</v-icon>Facebook</a></div>
+
+          <div class="mb-8" align="left"><a href="https://www.linkedin.com/in/andrey-boltikov-9a58911b8/"><v-icon class="mr-4" size="46px">mdi-linkedin</v-icon>LinkedIn</a></div>
+        
+          <div class="mb-8" align="left"><a href="https://github.com/BlackFireBolt"><v-icon class="mr-4" size="46px">mdi-github</v-icon>GitHub</a></div>
+        
+          <div class="mb-8" align="left"><a href="https://www.instagram.com/boltikov.andrey/?hl=ru"><v-icon class="mr-4" size="46px">mdi-instagram</v-icon>Instagram</a></div>
+
+          <div class="mb-8" align="left"><a href="https://stackoverflow.com/users/story/16232652"><v-icon class="mr-4" size="46px">mdi-stack-overflow</v-icon>StackOverflow</a></div>
+        
+    </v-col>
+  </v-row></v-container>
 </template>
 
 <script>
@@ -127,3 +108,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+</style>

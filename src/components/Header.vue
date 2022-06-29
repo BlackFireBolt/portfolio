@@ -16,7 +16,8 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar flat color="white">
+    <v-app-bar flat color="grey lighten-4">
+      
       <span class="hidden-sm-and-up"
         ><v-app-bar-nav-icon @click="sidebar = !sidebar">
           
@@ -30,6 +31,8 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn
+        plain
+        
           active-class="secondary--text"
           text
           v-for="item in itemsList"
@@ -59,3 +62,4 @@ export default {
   },
 };
 </script>
+

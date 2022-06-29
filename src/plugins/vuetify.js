@@ -10,8 +10,15 @@ export default new Vuetify({
         themes: {
             light: {
                 primary: colors.cyan.darken3,
-                secondary: colors.teal.lighten1
+                secondary: colors.teal.lighten1,
+                background: colors.grey.lighten4
+            },
+            dark:{
+                primary: colors.cyan.darken3,
+                secondary: colors.teal.lighten1,
+                background: colors.grey.lighten3
             }
         }
     }
 });
+//linear-gradient(0deg, grey, white 40%)

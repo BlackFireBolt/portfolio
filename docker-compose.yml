@@ -1,0 +1,18 @@
+version: "3.3"
+services: 
+  dashboard:
+    restart: always
+    build: .
+    container_name: portfolio
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+    environment:
+      - VIRTUAL_HOST=andreyboltikov.ml,www.andreyboltikov.ml
+      - VIRTUAL_PORT=8080
+      - VIRTUAL_NETWORK=proxy-network
+networks:
+  default: 
+    external: 
+      name: proxy-network

@@ -17,7 +17,7 @@
         
           <div class="mb-8" align="right"><a href="tel:+48503360984"><v-icon class="mr-4" size="46px">mdi-phone</v-icon>+48 503 360 984</a></div>
         
-          <div class="mb-8" align="right"><a href="https://telegram.me/Bollt"><v-icon class="mr-4" size="46px">mdi-send</v-icon>Telegram: <span class="primary--text">@</span>Bollt</a></div>
+          <div class="mb-8" align="right"><a href="https://t.me/andreyboltikov"><v-icon class="mr-4" size="46px">mdi-send</v-icon>Telegram: <span class="primary--text">@</span>andreyboltikov</a></div>
 
           <div class="mb-8" align="right"><a href="https://wa.me/48503360984"><v-icon class="mr-4 d-none d-sm-inline" size="46px">mdi-whatsapp</v-icon>WhatsApp: +48 503 360 984</a></div>
     </v-col>

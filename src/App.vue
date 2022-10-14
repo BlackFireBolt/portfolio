@@ -1,16 +1,15 @@
 <template>
-  <v-app :style="{background: $vuetify.theme.themes[theme].background}">
-    <v-main 
-      ><v-container fliud align-center>
-        <header-comp /></v-container>
-        <transition
-          name="router-animation"
-          mode="out-in"
-          enter-active-class="animated fadeIn fast"
-          leave-active-class="animated fadeOut faster"
-        >
-          <router-view></router-view>
-        </transition> </v-main
+  <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
+    <v-main
+      ><v-container fliud align-center> <header-comp /></v-container>
+      <transition
+        name="router-animation"
+        mode="out-in"
+        enter-active-class="animated fadeIn fast"
+        leave-active-class="animated fadeOut faster"
+      >
+        <router-view></router-view>
+      </transition> </v-main
     ><footer-comp />
   </v-app>
 </template>
@@ -31,10 +30,11 @@ export default {
     "footer-comp": Footer,
     "header-comp": Header,
   },
-  computed:{
-    theme(){
-      return (this.$vuetify.theme.dark) ? 'dark' : 'light'
-    }}
+  computed: {
+    theme() {
+      return this.$vuetify.theme.dark ? "dark" : "light";
+    },
+  },
 };
 </script>
 

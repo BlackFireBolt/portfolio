@@ -43,7 +43,7 @@
                 <h3 class="headline my-4">
                   <span class="primary--text">Used technologies</span>
                 </h3>
-                <v-chip class="mr-2" color="secondary" v-for="tech in item.tech" :key="tech">{{tech}}</v-chip>
+                <v-chip class="mr-2 my-2" color="secondary" v-for="tech in item.tech" :key="tech">{{tech}}</v-chip>
               </v-card-text>
               <v-card-actions align="center">
                 <v-btn text color="cyan darken-4" v-if="item.link" :href="item.link"><v-icon>mdi-github</v-icon>GitHub</v-btn>

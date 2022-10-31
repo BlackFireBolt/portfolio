@@ -1,4 +1,6 @@
-# boltikov.space
+# Portfolio web site
+
+VueJs + router. Full information about my skills, contacts, links on my past projects and my resume.
 
 ## Project setup
 ```

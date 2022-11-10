@@ -13,7 +13,7 @@
       <v-card-text class="description">
       <p class="text-justify font-weight-medium">
         I am JS (VueJS) and Python (FastAPI) developer. I have knowledge in
-        Django, Django REST, and Flask. In the future i want to learn Flutter(Dart) and GoLang. 
+        Django, Django REST, and Flask. In the future i want to learn Flutter (Dart) and GoLang. 
         </p>
               <p class="text-justify font-weight-medium">
         I worked as system administrator, managed local

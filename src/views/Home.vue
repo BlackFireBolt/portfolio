@@ -28,7 +28,7 @@
           Full Stack Web Developer
         </div>
         <div class="text-subtitle-1  primary--text darken-4">
-          Vue js + Python(FastAPI, Django, Flask)
+          Vue js + Python (FastAPI, Django, Flask)
         </div>
       </v-col></v-row
     >

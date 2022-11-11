@@ -7,27 +7,34 @@
         </div></v-col
       >
       <v-col md="12" align="center" justify="center">
-        <div style="position: relative;justify-content:center; display: flex; ">
-          <v-img src="https://res.cloudinary.com/dk4xap2wa/image/upload/v1656514297/b4_ktb4q9.jpg" height="200" style="position: relative;">
-            </v-img><v-avatar
-              style="
-              display: block;
-                position: absolute;
-                
-                top: -25%;
-                border: 3px solid teal;
-              "
-              size="300"
-            >
-              <v-img src="https://res.cloudinary.com/dk4xap2wa/image/upload/v1656514343/photo2_awyczh.webp"></v-img> </v-avatar
+        <div style="position: relative; justify-content: center; display: flex">
+          <v-img
+            src="https://res.cloudinary.com/dk4xap2wa/image/upload/v1656514297/b4_ktb4q9.jpg"
+            height="200"
+            style="position: relative"
           >
+          </v-img
+          ><v-avatar
+            style="
+              display: block;
+              position: absolute;
+
+              top: -25%;
+              border: 3px solid teal;
+            "
+            size="300"
+          >
+            <v-img
+              src="https://res.cloudinary.com/dk4xap2wa/image/upload/v1656514343/photo2_awyczh.webp"
+            ></v-img>
+          </v-avatar>
         </div>
       </v-col>
       <v-col md="12" class="my-11" align="center" justify="center">
         <div class="text-h4 mb-2 primary--text darken-4">
           Full Stack Web Developer
         </div>
-        <div class="text-subtitle-1  primary--text darken-4">
+        <div class="text-subtitle-1 primary--text darken-4">
           Vue js + Python (FastAPI, Django, Flask)
         </div>
       </v-col></v-row
@@ -38,10 +45,12 @@
 <script>
 export default {
   name: "Home",
-  metaInfo: {
-    title: "Home",
-    titleTemplate: "Andrey Boltikov - %s",
-    meta: [{ property: "og:title", content: "Andrey Boltikov" }],
+  metaInfo() {
+    return {
+      title: "Home",
+      titleTemplate: "Andrey Boltikov - %s",
+      meta: [{ property: "og:title", content: "Andrey Boltikov" }],
+    };
   },
   data() {
     return {

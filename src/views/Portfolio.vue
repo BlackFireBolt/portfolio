@@ -69,10 +69,12 @@
 <script>
 export default {
   name: "Portfolio",
-  metaInfo: {
-    title: "Portfolio",
-    titleTemplate: "Andrey Boltikov - %s",
-    meta: [{ property: "og:title", content: "Andrey Boltikov" }],
+  metaInfo() {
+    return {
+      title: "Portfolio",
+      titleTemplate: "Andrey Boltikov - %s",
+      meta: [{ property: "og:title", content: "Andrey Boltikov" }],
+    };
   },
   data() {
     return {

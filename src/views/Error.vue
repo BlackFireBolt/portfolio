@@ -1,24 +1,27 @@
 <template>
-<v-container fliud align-center>
-  <v-layout justify-center align-center class="mt-4 pt-2">
-    <div class="message">
-      <p>
-        404
-        <br />
-        <small>PAGE NOT FOUND</small>
-      </p>
-      <v-btn large to="/"><v-icon>mdi-arrow-left</v-icon>GO HOME</v-btn>
-    </div>
-  </v-layout></v-container>
+  <v-container fliud align-center>
+    <v-layout justify-center align-center class="mt-4 pt-2">
+      <div class="message">
+        <p>
+          404
+          <br />
+          <small>PAGE NOT FOUND</small>
+        </p>
+        <v-btn large to="/"><v-icon>mdi-arrow-left</v-icon>GO HOME</v-btn>
+      </div>
+    </v-layout></v-container
+  >
 </template>
 
 <script>
 export default {
   name: "Error",
-  metaInfo: {
-    title: "Error",
-    titleTemplate: "Andrey Boltikov - %s",
-    meta: [{property: "og:title", content: "Andrey Boltikov"}]
+  metaInfo() {
+    return {
+      title: "Error",
+      titleTemplate: "Andrey Boltikov - %s",
+      meta: [{ property: "og:title", content: "Andrey Boltikov" }],
+    };
   },
 };
 </script>

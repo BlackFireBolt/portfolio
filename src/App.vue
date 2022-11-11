@@ -21,10 +21,24 @@ import "animate.css";
 
 export default {
   name: "App",
-  metaInfo: {
-    title: "Home",
-    titleTemplate: "Andrey Boltikov - %s",
-    meta: [{ property: "og:title", content: "Andrey Boltikov" }],
+  metaInfo() {
+    return {
+      title: "Home",
+      titleTemplate: "Andrey Boltikov - %s",
+      meta: [
+        { property: "og:title", content: "Andrey Boltikov Portfolio" },
+        {
+          name: "description",
+          content:
+            "Full information about skills, contacts, examples of a projects and resume of Andrey Boltikov.",
+        },
+        {
+          property: "og:description",
+          content:
+            "Full information about skills, contacts, examples of a projects and resume of Andrey Boltikov.",
+        },
+      ],
+    };
   },
   components: {
     "footer-comp": Footer,
